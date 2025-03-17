@@ -1,0 +1,1632 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    
+        <!-- Font Awesome (for icons) -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<!-- 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+     -->
+
+    <style>
+        /* * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f8f8;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f5e4e4;
+            padding: 15px 40px;
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin: 0 15px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #000;
+            font-size: 18px;
+        }
+
+        .navbar .icons i {
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8a9b4;
+            padding: 60px 10%;
+            flex-wrap: wrap;
+            text-align: center; 
+        }
+
+        .hero-text {
+            max-width: 50%;
+            color: white;
+        }
+
+        .hero-text h1 {
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .hero-text p {
+            margin: 20px 0;
+           font-size: 20px;
+           font-weight: bold;
+        }
+
+        .hero-text button {
+            background: #d14c63;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .hero img {
+            max-width: 40%;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                 text-align: center;
+                padding: 15px;
+            }
+            .navbar ul {
+                flex-direction: column;
+                text-align: center;
+                width: 100%;
+            }
+            .navbar ul li {
+                margin: 10px 0;
+            }
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 40px 5%;
+            }
+            .hero-text {
+                max-width: 100%;
+            }
+            .hero img {
+                max-width: 100%;
+                margin-top: 20px;
+            }
+        } */
+        /* update */
+
+
+        /* .navbar {
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    color: #333;
+}
+
+.navbar-nav .nav-link {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff6600;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.d-flex i {
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.d-flex i:hover {
+    color: #ff6600;
+} */
+
+
+
+        /* //update */
+
+
+        /* aro */
+
+
+        /* /aro */
+
+        /* card */
+
+/* General Styles */
+.body1 {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Product Card */
+.product-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Product Image */
+.product-card img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Product Name */
+.product-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* Price */
+.price {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.price span {
+    color: red;
+}
+
+/* New Badge */
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: white;
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 50px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Styles */
+.body2 {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Section Title */
+.shop-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Product Grid */
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Product Card */
+.shop-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.shop-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Product Image */
+.shop-item img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Product Name */
+.shop-item h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* Price */
+.cost {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cost span {
+    color: red;
+}
+
+/* New Badge */
+.tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: white;
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 50px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* View All Button */
+.btn-container {
+    margin-top: 20px;
+}
+
+.view-btn {
+    background-color: #ff527b;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.view-btn:hover {
+    background-color: #e74c70;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .shop-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .shop-item img {
+        width: 80px;
+    }
+    .view-btn {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}
+
+
+        /* /card */
+
+        /* flex2 */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .body3 {
+            background-color: #f8f8f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+            /* position: relative;
+            bottom: 30px; */
+        }
+
+        .banner {
+            display: flex;
+            align-items: center;
+            background: #87CEEB;
+            border-radius: 10px;
+            padding: 40px;
+            max-width: 1000px;
+            width: 100%;
+            position: relative;
+            bottom: 80px;
+        }
+
+        .banner img {
+            width: 300px;
+            border-radius: 10px;
+        }
+
+        .banner-text {
+            margin-left: 20px;
+            color: white;
+        }
+
+        .banner-text h1 {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .banner-text p {
+            font-size: 16px;
+            margin: 15px 0;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+        }
+
+        @media (max-width: 768px) {
+            .banner {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+                bottom: 40px;
+            }
+
+            .banner img {
+                width: 80%;
+            }
+
+            .banner-text {
+                margin: 20px 0 0 0;
+            }
+        }
+
+@media screen and (max-width: 480px) {
+    .banner {
+        padding: 15px;
+        bottom: 20px;
+    }
+}
+
+
+
+        /* flex2 */
+
+
+        /* section */
+
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.shop-benefits {
+    padding: 50px 20px;
+    background: white;
+}
+
+.shop-benefits h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: -170px; /* Moves the section up */
+    position: relative;
+}
+
+.benefits-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.benefit {
+    background: #f6f6f6;
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.benefit:hover {
+    transform: translateY(-5px);
+}
+
+.benefit i {
+    font-size: 40px;
+    color: #5e3bee;
+    margin-bottom: 15px;
+}
+
+.benefit h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.benefit p {
+    font-size: 14px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .shop-benefits {
+        margin-top: -100px; /* Less negative margin for smaller screens */
+        /* padding: 30px 15px; */
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .shop-benefits {
+        margin-top: -10px; /* Even smaller margin for mobile */
+        padding: 25px 10px;
+    }
+}
+
+/* Mobile Screens */
+@media (max-width: 480px) {
+    .shop-benefits h2 {
+        margin-top: -50px; /* Even less margin for mobile */
+        font-size: 22px;
+    }
+}
+        /* ...///section */
+
+        /* section2 */
+
+        /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Gift Section Styling */
+.gift-section {
+    background-color: #6a1b9a; /* Purple background */
+    color: white;
+    padding: 50px;
+}
+
+.gift-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Image Styling */
+.gift-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Content Styling */
+.gift-content {
+    max-width: 50%;
+}
+
+.gift-content h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.gift-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Buttons */
+.button-group {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background: white;
+    color: black;
+}
+
+.btn-secondary {
+    background: #a34ee1;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #ddd;
+}
+
+.btn-secondary:hover {
+    background: #8838c3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gift-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .gift-content {
+        max-width: 100%;
+        margin-top: px;
+    }
+
+    .button-group {
+        justify-content: center;
+    }
+    
+   
+}
+
+
+
+        /* section2 */
+
+        /* map */
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Contact Container */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Google Map */
+.map-container {
+    width: 50%;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+}
+
+/* Contact Form */
+.form-container {
+    width: 45%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Send Button */
+.btn-send {
+    width: 100%;
+    padding: 10px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-send:hover {
+    background-color: #c9302c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .map-container, .form-container {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .btn-send {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+
+
+        /* ///map */
+
+        /* java */
+
+
+        /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.body7 {
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 40px;
+}
+
+/* Section Heading */
+h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Testimonial Container */
+.testimonial-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Testimonial Box */
+.testimonial-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    max-width: 600px;
+}
+
+.testimonial-text {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.testimonial-name {
+    font-size: 20px;
+    color: #d9534f;
+    font-weight: bold;
+}
+
+.testimonial-role {
+    font-size: 14px;
+    color: #999;
+}
+
+/* Navigation Buttons */
+.prev-btn, .next-btn {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev-btn { left: -50px; }
+.next-btn { right: -50px; }
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: #c9302c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .testimonial-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .testimonial-box {
+        max-width: 90%;
+    }
+
+    .prev-btn, .next-btn {
+        position: static;
+        margin: 10px;
+    }
+}
+
+/* 
+        /java */
+
+        /* footer */
+
+/* General Styles */
+  /* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-section h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #f2a900;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #f2a900;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    font-size: 14px;
+} */
+
+/* Responsive Design */
+/* @media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+} */
+
+
+        /* //footer */
+
+
+        /* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+footer {
+    background: #222;
+    color: white;
+    padding: 30px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-section h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #f2a900;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Newsletter */
+.newsletter input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+}
+
+.newsletter button {
+    width: 100%;
+    padding: 10px;
+    background: #f28b8b;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.newsletter button:hover {
+    background: #e06a6a;
+}
+
+/* Social Media Icons */
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons i {
+    font-size: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.social-icons i:hover {
+    color: #f2a900;
+}
+
+/* Contact Info */
+.contact p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+
+    .contact p {
+        justify-content: center;
+    }
+}
+
+/* newnav */
+
+
+.fw-bold,p{
+    color: white;
+}
+        body {
+            background-color: #f8f8f8;
+        }
+
+        /* Navbar */
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 18px;
+        }
+
+        .icons i {
+            font-size: 20px;
+            cursor: pointer;
+            margin-left: 15px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: #f8a9b4;
+            padding: 80px 10%;
+        }
+
+        .hero-text {
+            color: white;
+        }
+
+        .hero-text h1 {
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .hero-text p {
+            margin: 20px 0;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .hero-text .btn {
+            background: #d14c63;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 16px;
+        }
+
+        .hero img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                text-align: center;
+            }
+            .hero img {
+                margin-top: 20px;
+                width: 80%;
+            }
+        }
+
+/* //new nav */
+
+    </style>
+</head>
+<body>
+     <!-- <nav class="navbar">
+        <div class="logo">GIFTOS</div>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">SHOP</a></li>
+            <li><a href="#">WHY US</a></li>
+            <li><a href="#">TESTIMONIAL</a></li>
+            <li><a href="#">CONTACT US</a></li>
+        </ul>
+        <div class="icons">
+            <i class="fas fa-user"></i>
+            <i class="fas fa-shopping-bag"></i>
+            <i class="fas fa-search"></i>
+        </div>
+    </nav>  -->
+
+    <!-- newnav -->
+
+<!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-light py-3">
+    <div class="container">
+        <a class="navbar-brand" href="#">GIFTOS</a>
+
+        <!-- Toggle Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse text-center" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link active" href="#">HOME</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">SHOP</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">WHY US</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">TESTIMONIAL</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">CONTACT US</a></li>
+            </ul>
+        </div>
+
+        <!-- Icons -->
+        <div class="icons d-flex">
+            <i class="fas fa-user"></i>
+            <i class="fas fa-shopping-bag"></i>
+            <i class="fas fa-search"></i>
+        </div>
+    </div>
+
+
+
+    <!-- carousal -->
+
+    
+
+
+
+    <!-- carousal -->
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Text Content -->
+            <div class="col-lg-6 text-center text-lg-start">
+                <h1 class="fw-bold">Welcome To Our Gift Shop</h1>
+                <p>  
+                    Sequi perspiciatis nulla reiciendis, rem, tenetur impedit, eveniet non necessitatibus error distinctio mollitia suscipit. Nostrum fugit doloribus consequatur distinctio esse, possimus maiores aliquid repellat beatae cum, perspiciatis enim, accusantium perferendis.
+                </p>
+                <button class="btn" style="background-color: #d14c63; color: white;">Contact Us</button>
+            </div>
+            <!-- Image -->
+            <div class="col-lg-6 text-center">
+                <img src="images/slider-img.png" class="img-fluid" alt="Gift Image">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- //new nav -->
+<!-- update nav -->
+<!-- 
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">GIFTOS</a> -->
+
+        <!-- Mobile Toggle Button -->
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button> -->
+
+        <!-- Navbar Links -->
+        <!-- <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="#">HOME</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">SHOP</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">WHY US</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">TESTIMONIAL</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">CONTACT US</a></li>
+            </ul>
+        </div> -->
+
+        <!-- Icons Section -->
+        <!-- <div class="d-flex align-items-center gap-3">
+            <i class="fas fa-user"></i>
+            <i class="fas fa-shopping-bag"></i>
+            <i class="fas fa-search"></i>
+        </div>
+    </div>
+</nav> -->
+
+<!-- //updatenav -->
+
+
+
+    <!-- <section class="hero">
+        <div class="hero-text">
+            <h1>Welcome To Our Gift Shop</h1>
+            <p>Sequi perspiciatis nulla reiciendis, rem, tenetur impedit, eveniet non necessitatibus error distinctio mollitia suscipit...</p>
+            <button >CONTACT US</button>
+        </div>
+        <img src="images/slider-img.png" alt="Gift Shop">
+    </section> -->
+
+<!-- aro -->
+
+
+ 
+
+
+<!-- aro -->
+
+<!-- card -->
+<div class="body1">
+<section class="product-section">
+    <h2 class="section-title">LATEST PRODUCTS</h2>
+    <div class="product-grid">
+        
+        <div class="product-card">
+            <span class="badge">New</span>
+            <img src="images/p1.png" alt="Ring">
+            <h3>Ring</h3>
+            <p class="price">Price <span>$200</span></p>
+        </div>
+
+        <div class="product-card">
+            <span class="badge">New</span>
+            <img src="images/p2.png" alt="Watch">
+            <h3>Watch</h3>
+            <p class="price">Price <span>$300</span></p>
+        </div>
+
+        <div class="product-card">
+            <span class="badge">New</span>
+            <img src="images/p3.png" alt="Teddy Bear">
+            <h3>Teddy Bear</h3>
+            <p class="price">Price <span>$110</span></p>
+        </div>
+
+        <div class="product-card">
+            <span class="badge">New</span>
+            <img src="images/p4.png" alt="Flower Bouquet">
+            <h3>Flower Bouquet</h3>
+            <p class="price">Price <span>$45</span></p>
+        </div>
+      
+        
+       
+       
+
+    </div>
+</section>
+</div>
+
+
+
+
+
+
+
+<div class="body2">
+<section class="shop-section">
+    <!-- <h2 class="shop-title">LATEST PRODUCTS</h2> -->
+    
+    <div class="shop-grid">
+        <div class="shop-item">
+            <span class="tag">New</span>
+            <img src="images/p5.png" alt="Teddy Bear">
+            <h3>Teddy Bear</h3>
+            <p class="cost">Price <span>$95</span></p>
+        </div>
+
+        <div class="shop-item">
+            <span class="tag">New</span>
+            <img src="images/p6.png" alt="Flower Bouquet">
+            <h3>Flower Bouquet</h3>
+            <p class="cost">Price <span>$70</span></p>
+        </div>
+
+        <div class="shop-item">
+            <span class="tag">New</span>
+            <img src="images/p7.png" alt="Watch">
+            <h3>Watch</h3>
+            <p class="cost">Price <span>$400</span></p>
+        </div>
+
+        <div class="shop-item">
+            <span class="tag">New</span>
+            <img src="images/p8.png" alt="Ring">
+            <h3>Ring</h3>
+            <p class="cost">Price <span>$450</span></p>
+        </div>
+    </div>
+
+    <div class="btn-container">
+        <button class="view-btn">View All Products</button>
+    </div>
+</section>
+</div>
+<!-- /card -->
+
+
+<!-- flex2 -->
+<div class="body3" >
+<div class="banner">
+    <img src="images/saving-img.png" alt="Shopping Girl">
+    <div class="banner-text">
+        <h1>BEST SAVINGS ON NEW ARRIVALS</h1>
+        <p>Enjoy amazing discounts on our latest collection. Get the best deals now!</p>
+        <div class="buttons">
+            <button class="btn btn-primary">Buy Now</button>
+            <button class="btn btn-secondary">See More</button>
+        </div>
+    </div>
+</div>
+</div>
+ <!-- /flex2 -->
+<!-- 
+ section -->
+
+
+ <section class="shop-benefits">
+    <h2>WHY SHOP WITH US</h2>
+    <div class="benefits-container">
+        <div class="benefit">
+            <i class="fas fa-truck"></i>
+            <h3>Fast Delivery</h3>
+            <p>Variations of passages of Lorem Ipsum available</p>
+        </div>
+        <div class="benefit">
+            <i class="fas fa-shipping-fast"></i>
+            <h3>Free Shipping</h3>
+            <p>Variations of passages of Lorem Ipsum available</p>
+        </div>
+        <div class="benefit">
+            <i class="fas fa-award"></i>
+            <h3>Best Quality</h3>
+            <p>Variations of passages of Lorem Ipsum available</p>
+        </div>
+    </div>
+</section>
+
+
+
+ <!-- ..../section -->
+
+ <!-- section2 -->
+
+ 
+ <section class="gift-section">
+    <div class="gift-container">
+        <div class="gift-image">
+            <img src="images/gifts.png" alt="Gifts and Balloons">
+        </div>
+        <div class="gift-content">
+            <h2>GIFTS FOR YOUR <br> LOVED ONES</h2>
+            <p>
+                Omnis ex nam laudantium odit illum harum, excepturi accusamus at corrupti, 
+                velit blanditiis unde perspiciatis, vitae minus culpa? Beatae at aut 
+                consequuntur porro adipisci aliquam eaque iste ducimus expedita accusantium?
+            </p>
+            <div class="button-group">
+                <button class="btn btn-primary">Buy Now</button>
+                <button class="btn btn-secondary">See More</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- section22 -->
+
+  <!-- map -->
+
+
+  <section class="contact-section">
+    <h2>CONTACT US</h2>
+    <div class="contact-container">
+        <!-- Google Map -->
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.999850100942!2d2.2922928156736763!3d48.85884407928739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66efdd2df3d3f%3A0x420b52a3e05b63eb!2sEiffel%20Tower!5e0!3m2!1sen!2sus!4v1644495757465!5m2!1sen!2sus" 
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="form-container">
+            <form>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Phone" required>
+                <textarea placeholder="Message" rows="4" required></textarea>
+                <button type="submit" class="btn-send">SEND</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+  <!-- map -->
+
+  <!-- java -->
+
+  <div class="body7">
+  <section class="testimonial-section">
+    <h2>TESTIMONIAL</h2>
+    <div class="testimonial-container">
+        <!-- Left Arrow -->
+        <button class="prev-btn">&#10094;</button>
+
+        <!-- Testimonial Content -->
+        <div class="testimonial-box">
+            <p class="testimonial-text"></p>
+            <h3 class="testimonial-name"></h3>
+            <p class="testimonial-role"></p>
+        </div>
+
+        <!-- Right Arrow -->
+        <button class="next-btn">&#10095;</button>
+    </div>
+</section>
+</div>
+<script>
+    const testimonials = [
+    {
+        text: "Various editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many websites still in their infancy.",
+        name: "Brad Johns",
+        role: "Default model text"
+    },
+    {
+        text: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.",
+        name: "Sarah Parker",
+        role: "Marketing Expert"
+    },
+    {
+        text: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature.",
+        name: "John Doe",
+        role: "Software Engineer"
+    }
+];
+
+let currentIndex = 0;
+
+function updateTestimonial() {
+    document.querySelector(".testimonial-text").textContent = testimonials[currentIndex].text;
+    document.querySelector(".testimonial-name").textContent = testimonials[currentIndex].name;
+    document.querySelector(".testimonial-role").textContent = testimonials[currentIndex].role;
+}
+
+// Load the first testimonial
+updateTestimonial();
+
+document.querySelector(".prev-btn").addEventListener("click", () => {
+    currentIndex = (currentIndex === 0) ? testimonials.length - 1 : currentIndex - 1;
+    updateTestimonial();
+});
+
+document.querySelector(".next-btn").addEventListener("click", () => {
+    currentIndex = (currentIndex === testimonials.length - 1) ? 0 : currentIndex + 1;
+    updateTestimonial();
+});
+
+</script>
+
+
+   <!-- /java -->
+<!-- 
+   footer -->
+ <!-- Footer Section -->
+   <!-- <footer>
+    <div class="footer-container">
+        <div class="footer-section about">
+            <h2>About Us</h2>
+            <p>We provide high-quality products to our customers with excellent support and services.</p>
+        </div>
+        <div class="footer-section links">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section contact">
+            <h2>Contact Us</h2>
+            <p><i class="fas fa-map-marker-alt"></i> Chennai, India</p>
+            <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+            <p><i class="fas fa-envelope"></i> info@example.com</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 YourCompany. All Rights Reserved.</p>
+    </div>
+</footer> -->
+
+
+
+   <!-- //footer -->
+   <footer>
+    <div class="footer-container">
+        <div class="footer-section about">
+            <h2>ABOUT US</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet.</p>
+        </div>
+
+        <div class="footer-section newsletter">
+            <h2>Newsletter</h2>
+            <input type="email" placeholder="Enter your email">
+            <button>SUBSCRIBE</button>
+            <div class="social-icons">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+
+        <div class="footer-section help">
+            <h2>NEED HELP</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet.</p>
+        </div>
+
+        <div class="footer-section contact">
+            <h2>CONTACT US</h2>
+            <p><i class="fas fa-map-marker-alt"></i> Gb road 123, London, UK</p>
+            <p><i class="fas fa-phone"></i> +01 12345678901</p>
+            <p><i class="fas fa-envelope"></i> demo@gmail.com</p>
+        </div>
+    </div>
+    
+    <hr>
+    <div class="footer-bottom">
+        <p>&copy; 2025 All Rights Reserved By Free Html Templates</p>
+    </div>
+</footer>
+</body>
+</html>
+
